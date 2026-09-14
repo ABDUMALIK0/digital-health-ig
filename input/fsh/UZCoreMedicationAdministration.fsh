@@ -102,17 +102,48 @@ Description: "Example instance of a completed Paracetamol administration for Pat
 * recorded = "2026-08-28"
 
 * performer.function = $medication-administration-performer-function-codes#performer
-* performer.actor = Reference(example-practitioner)
+* performer.actor = Reference(example-practitioner-gender-other)
 
-* reason = Reference(example-cancer)
+* reason = Reference(example-disability)
 
 * device.concept = $sct#430033006 "Infusion pump"
 
 * dosage.dose = 500 'mg'
 * dosage.route = $sct#26643006 "Oral route"
 * dosage.site = $sct#368208006 "Left upper arm structure"
-* dosage.rateRatio = 100 'ml' / 1 'h'
+* dosage.rateRatio = 100 'ml' : 1 'h'
 
 * extension[relatedAllergyIntolerance].valueReference = Reference(example-grass-pollen-allergy)
 * extension[medicationSource].extension[financingSource].valueCodeableConcept = FinancingSourceCS#fnncl-0001-00004 "Budget"
 * extension[medicationSource].extension[lotNumber].valueString = "12345s"
+
+Instance: example-Med-Administration-002
+InstanceOf: UZCoreMedicationAdministration
+Usage: #example
+Title: "Example UZCore Medication Administration"
+Description: "Example instance of a completed Paracetamol administration for Patient/1."
+* status = #completed
+* statusReason = $medicationrequest-status-reason#non-avail
+* category = $medicationrequest-admin-location#inpatient
+* medication[0] = $sct#387517004 "Paracetamol"
+* subject = Reference(example-salim)
+* encounter = Reference(example-encounter)
+* occurenceDateTime = "2026-08-28"
+* recorded = "2026-08-28"
+
+* performer.function = $medication-administration-performer-function-codes#performer
+* performer.actor = Reference(example-practitioner)
+
+* reason = Reference(example-cancer)
+
+* device.concept = $sct#430033006 "Infusion pump"
+
+* dosage.dose = 400 'mg'
+* dosage.route = $sct#26643006 "Oral route"
+* dosage.site = $sct#368208006 "Left upper arm structure"
+* dosage.rateRatio.numerator = 500 'mg'
+* dosage.rateRatio.denominator = 1 'h'
+
+* extension[relatedAllergyIntolerance].valueReference = Reference(example-grass-pollen-allergy)
+* extension[medicationSource].extension[financingSource].valueCodeableConcept = FinancingSourceCS#fnncl-0001-00001 "Self-financing"
+* extension[medicationSource].extension[lotNumber].valueString = "12345"
