@@ -114,6 +114,7 @@ Description: "Example instance of a completed Paracetamol administration for Pat
 * dosage.rateRatio = 100 'ml' : 1 'h'
 
 * extension[relatedAllergyIntolerance].valueReference = Reference(example-grass-pollen-allergy)
+* extension[location].valueReference = Reference(xonobod-medical-association)
 * extension[medicationSource].extension[financingSource].valueCodeableConcept = FinancingSourceCS#fnncl-0001-00004 "Budget"
 * extension[medicationSource].extension[lotNumber].valueString = "12345s"
 
@@ -145,5 +146,6 @@ Description: "Example instance of a completed Paracetamol administration for Pat
 * dosage.rateRatio.denominator = 1 'h'
 
 * extension[relatedAllergyIntolerance].valueReference = Reference(example-grass-pollen-allergy)
+* extension[location].valueReference = Reference(tashkent-diseases-hospital)
 * extension[medicationSource].extension[financingSource].valueCodeableConcept = FinancingSourceCS#fnncl-0001-00001 "Self-financing"
 * extension[medicationSource].extension[lotNumber].valueString = "12345"
