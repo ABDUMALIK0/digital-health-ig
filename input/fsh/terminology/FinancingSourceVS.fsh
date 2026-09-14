@@ -4,5 +4,5 @@ Title: "Financing Source value set"
 Description: "Financing Source value in Uzbek and Russian translations"
 * ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/financing-source-vs"
 * ^experimental = true
-
+* ^language = #uz
 * include codes from system financing-source-cs

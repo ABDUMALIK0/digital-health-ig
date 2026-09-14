@@ -228,7 +228,7 @@ Context: MedicationAdministration
 
 * extension[financingSource].value[x] only CodeableConcept
 * extension[financingSource].value[x] 1..1
-* extension[financingSource].valueCodeableConcept from FinancingSourceVS (required)
+* extension[financingSource].valueCodeableConcept from FinancingSourceVS
 
 * extension[invoiceNumber] ^short = "'№ накладной' — delivery/invoice number this batch was received under."
 * extension[invoiceNumber].value[x] 0..1

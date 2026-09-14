@@ -49,7 +49,7 @@ Description: "Administration of medication to a patient"
 * reason MS
 * reason ^short = "Clinical justification for why the medication was given."
 * reason only CodeableReference(UZCoreCondition or UZCoreObservation or UZCoreDiagnosticReport)
-* reason from ReasonMedicationGivenCodesVS
+* reason from ReasonMedicationGivenCodesVS (example)
 
 * request MS
 * request ^short = "The order this administration fulfills."
@@ -85,7 +85,7 @@ Description: "Administration of medication to a patient"
 * extension[location] ^short = "Organization/location where administration took place"
 * extension[location].valueReference only Reference(UZCoreOrganization)
 
-* extension[medicationSource].extension[financingSource].valueCodeableConcept from FinancingSourceVS (required)
+* extension[medicationSource].extension[financingSource].valueCodeableConcept from FinancingSourceVS
 
 Instance: example-Med-Administration-001
 InstanceOf: UZCoreMedicationAdministration
@@ -111,6 +111,8 @@ Description: "Example instance of a completed Paracetamol administration for Pat
 * dosage.dose = 500 'mg'
 * dosage.route = $sct#26643006 "Oral route"
 * dosage.site = $sct#368208006 "Left upper arm structure"
+* dosage.rateRatio = 100 'ml' / 1 'h'
 
 * extension[relatedAllergyIntolerance].valueReference = Reference(example-grass-pollen-allergy)
 * extension[medicationSource].extension[financingSource].valueCodeableConcept = FinancingSourceCS#fnncl-0001-00004 "Budget"
+* extension[medicationSource].extension[lotNumber].valueString = "12345s"
